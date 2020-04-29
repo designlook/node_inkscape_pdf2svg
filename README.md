@@ -9,6 +9,8 @@ Conversion by Inkscape is done sequentially.
 Make sure you have node and Inkscape installed on your computer. Then run:
 
 ```
+git clone https://github.com/designlook/node_inkscape_pdf2svg
+cd node_inkscape_pdf2svg
 npm install
 ```
 ## How to Use
