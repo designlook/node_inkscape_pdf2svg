@@ -5,6 +5,9 @@ Conversion by Inkscape is done sequentially.
 
 ***
 ## Installation
+
+Make sure you have node and Inkscape installed on your computer. Then run:
+
 ```
 npm install
 ```
