@@ -1,5 +1,8 @@
 ## About NODE_INKSCAPE_SVG2PDF
 Use Inkscape to convert your PDF images to SVG format. Often times when I download vector files from various sites, it comes in Illustrator AI and EPS formats. What I would do is RENAME the .ai file to .pdf and then use Inkscape to convert the PDF to SVG.
+
+Conversion by Inkscape is done sequentially.
+
 ***
 ## Installation
 ```
