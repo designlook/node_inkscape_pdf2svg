@@ -24,7 +24,7 @@ To do entire directories recursively
 node index.js <directory path>
 ```
 
-You can try the samples via:
+You can try the samples (first delete the SVGs in the directories) and then run:
 
 ```
 node index.js ./pdfs
