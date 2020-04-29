@@ -12,6 +12,18 @@ In your terminal console, go to the directory of where you have downloaded these
 node index.js <path to your PDF file>
 ```
 
+To do entire directories recursively
+
+```
+node index.js <directory path>
+```
+
+You can try the samples via:
+
+```
+node index.js ./pdfs
+```
+
 The SVG will be saved in same directory as your source PDF. You can also specify a directory and it will recursively go through all directories under that target directory and process all SVG files. My samples under PDF directory is set this way. Sample images are from freepik.com where I renamed the .ai files to .pdf so it can be processed by Inkscape.
 
 #### Save results to MySQL Database
