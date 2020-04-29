@@ -1,0 +1,35 @@
+{
+  "name": "node_inkscape_pdf2svg",
+  "version": "1.0.0",
+  "description": "Convert PDF to SVG files using Inkscape",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/designlook/node_inkscape_pdf2svg.git"
+  },
+  "keywords": [
+    "inkscape",
+    "svg",
+    "pdf"
+  ],
+  "author": "Scott Yu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/designlook/node_inkscape_pdf2svg/issues"
+  },
+  "homepage": "https://github.com/designlook/node_inkscape_pdf2svg#readme",
+  "dependencies": {
+    "async": "^3.2.0",
+    "bookshelf": "^1.1.1",
+    "inkscape": "^2.0.0",
+    "knex": "^0.21.1",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "recursive-readdir": "^2.2.2",
+    "stream": "0.0.2",
+    "svgo": "^1.3.2"
+  }
+}
