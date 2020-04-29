@@ -32,6 +32,8 @@ node index.js ./pdfs
 
 The SVG will be saved in same directory as your source PDF. You can also specify a directory and it will recursively go through all directories under that target directory and process all SVG files. My samples under PDF directory is set this way. Sample images are from freepik.com where I renamed the .ai files to .pdf so it can be processed by Inkscape.
 
+To view the SVG, just drag the SVG file into an open browser window.
+
 #### Save results to MySQL Database
 
 The file index_mysql_db.js is for those who want to save the results to MySQL database. I used BookshelfJS library for connecting to MySQL database. In example code, the database name is "media" and the table name is "images".
