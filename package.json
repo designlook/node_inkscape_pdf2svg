@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/designlook/node_inkscape_pdf2svg#readme",
   "dependencies": {
-    "async": "^3.2.0",
+    "async": "^3.2.2",
     "bookshelf": "^1.1.1",
     "inkscape": "^2.0.0",
     "knex": "^0.21.1",
