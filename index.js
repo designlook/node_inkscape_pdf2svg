@@ -16,13 +16,13 @@ const filePath = process.argv[2];
     if (err)
       return console.log(err); //Handle error
     if (stats.isFile()) {
-      console.log('PROCESSING FILE========= ')
-      convertFile(filePath)
+      console.log('PROCESSING FILE========= ');
+      convertFile(filePath);
     } else if (stats.isDirectory()) {
       console.log('PROCESSING DIRECTORY========= ')
       recursive(filePath, ["foo.cs", "*.html", "*.jpg", "*.png", "*.svg"], function(err, files) {
         const numPromise = async.mapLimit(files, 1, async function(filePath) {
-          return convertFile(filePath)
+          return convertFile(filePath);
         })
         return numPromise.then((result) => console.log(result)).catch(() => {})
       })
@@ -31,18 +31,18 @@ const filePath = process.argv[2];
 })()
 
 const isValidFileSize = (file) => {
-  return fs.statSync(file)["size"] < 4000000
+  return fs.statSync(file)["size"] < 4000000;
 }
 
 const isValidFile = ext => {
-  let allowed_ext = ['.pdf']
-  return allowed_ext.includes(ext)
+  let allowed_ext = ['.pdf'];
+  return allowed_ext.includes(ext);
 }
 
 const stripText = function(str) {
   // removes <Text> tags in the SVG - optional
-  str = str.replace(/<text[\s\S]+?<\/text>/g, '')
-  return str
+  str = str.replace(/<text[\s\S]+?<\/text>/g, '');
+  return str;
 }
 
 const convertFile = filePath => {
@@ -51,12 +51,13 @@ const convertFile = filePath => {
     if (isValidFile(file.ext) && isValidFileSize(filePath)) {
       new Promise((resolve, reject) => {
         const inkscape = new Inkscape([
+          '--export-text-to-path',
           '--export-plain-svg',
           '--export-area-drawing',
           '--import-pdf'
         ]);
 
-        const outputSVG = filePath + '.svg'
+        const outputSVG = filePath + '.svg'; // Remove original file extention.
 
         const SvgStream = fs.createWriteStream(outputSVG);
 
@@ -70,13 +71,13 @@ const convertFile = filePath => {
         fs.createReadStream(filePath).pipe(inkscape).pipe(removeTextTags).pipe(SvgStream)
 
         SvgStream.on("finish", function() {
-          console.log(`FINISHED - ${filePath}`)
+          console.log(`FINISHED - ${filePath}`);
           resolve();
         });
       });
-      return file
+      return file;
     }
   } catch (e) {
-    console.log(e)
+    console.log(e);
   }
 }
