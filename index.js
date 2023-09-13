@@ -51,10 +51,11 @@ const convertFile = filePath => {
     if (isValidFile(file.ext) && isValidFileSize(filePath)) {
       new Promise((resolve, reject) => {
         const inkscape = new Inkscape([
+          '--pdf-poppler',
           '--export-text-to-path',
           '--export-plain-svg',
-          '--export-area-drawing',
-          '--import-pdf'
+          '--export-area-drawing'
+          //'--import-pdf'
         ]);
 
         const outputSVG = filePath + '.svg'; // Remove original file extention.
